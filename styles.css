@@ -1,11 +1,10 @@
 :root {
-  --ink: #1a1a1a;
-  --muted: #5c5c5c;
-  --accent: #45BFB0;      /* teal */
-  --accent-warm: #E07A5F; /* orange */
-  --rule: #e6e6e6;
-  --bg: #fdfdfc;
-  --max: 720px;
+  --ink: #1f1f1f;
+  --muted: #6a6a6a;
+  --teal: #1f8a7a;        /* headings & name */
+  --teal-dark: #176a5e;
+  --rule: #e7e7e7;
+  --bg: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -16,141 +15,191 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Newsreader", Georgia, "Times New Roman", serif;
-  font-size: 18px;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
-main {
-  max-width: var(--max);
+a { color: var(--ink); }
+
+/* ===================== Layout ===================== */
+.layout {
+  display: flex;
+  gap: 64px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 64px 24px 96px;
+  padding: 72px 40px 96px;
+  align-items: flex-start;
 }
 
-/* ---------- Header ---------- */
-.hero {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  margin-bottom: 56px;
+/* ===================== Sidebar ===================== */
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 48px;
 }
 
 .avatar {
-  width: 116px;
-  height: 116px;
-  border-radius: 50%;
+  width: 100%;
+  max-width: 230px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  flex-shrink: 0;
-  border: 1px solid var(--rule);
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 22px;
 }
 
-.hero-text h1 {
-  margin: 0 0 4px;
-  font-size: 2.1rem;
-  font-weight: 600;
+.sidebar h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: -0.01em;
+  color: var(--teal);
+  margin: 0 0 10px;
 }
 
 .role {
-  margin: 0 0 14px;
+  font-size: 0.9rem;
   color: var(--muted);
-  font-style: italic;
+  margin: 0 0 24px;
+  line-height: 1.45;
 }
 
-.links {
-  list-style: none;
+/* nav (anchor links) */
+.nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+
+.nav a:hover { color: var(--teal); }
+
+/* external links */
+.ext-links {
+  list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "Inter", system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   font-size: 0.92rem;
 }
 
-.links a {
-  color: var(--ink);
+.ext-links a {
+  color: var(--muted);
   text-decoration: none;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 1px;
-  transition: color .15s, border-color .15s;
+  border-bottom: 1px solid transparent;
 }
 
-.links a:hover { color: var(--accent); }
+.ext-links a:hover {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+}
 
-/* ---------- Sections ---------- */
-section { margin-bottom: 48px; }
+/* ===================== Content ===================== */
+.content {
+  flex: 1;
+  max-width: 680px;
+  min-width: 0;
+}
+
+.content > section:first-child { margin-top: 4px; }
+
+section { margin-bottom: 44px; }
 
 h2 {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.82rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent-warm);
-  margin: 0 0 16px;
-  padding-bottom: 8px;
+  color: var(--teal);
+  margin: 0 0 18px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--rule);
 }
 
 p { margin: 0 0 16px; }
 
-a { color: var(--accent); }
-
-/* ---------- Research ---------- */
-.project { margin-bottom: 22px; }
-.project h3 {
-  margin: 0 0 4px;
-  font-size: 1.15rem;
-  font-weight: 600;
+.content a {
+  color: var(--teal-dark);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31,138,122,0.35);
 }
+.content a:hover { border-bottom-color: var(--teal); }
+
+/* ---------- Work in progress ---------- */
+.project { margin-bottom: 24px; }
+
+.project h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.project .authors,
 .project p { margin: 0; color: var(--muted); }
+
+.subprojects {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0 0 0 16px;
+  border-left: 2px solid var(--rule);
+}
+
+.subprojects li { margin-bottom: 10px; }
+.subprojects li:last-child { margin-bottom: 0; }
+.subprojects .ptitle { display: block; font-weight: 500; color: var(--ink); }
+.subprojects .authors { display: block; font-size: 0.92rem; }
 
 /* ---------- Publications ---------- */
 .year {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--muted);
-  margin: 24px 0 8px;
+  margin: 22px 0 10px;
 }
 
-.pubs {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+.pubs { list-style: none; margin: 0; padding: 0; }
 
-.pubs li {
-  margin-bottom: 18px;
-  padding-left: 0;
-}
+.pubs li { margin-bottom: 18px; }
 
-.pubs .authors { display: block; }
-.pubs .ptitle { display: block; font-weight: 500; }
-.pubs .venue  { display: block; color: var(--muted); font-size: 0.95rem; }
-.pubs .plinks {
-  display: block;
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.85rem;
-  margin-top: 2px;
-}
+.pubs .authors { display: block; color: var(--ink); }
+.pubs .ptitle  { display: block; font-weight: 500; }
+.pubs .venue   { display: block; color: var(--muted); font-size: 0.95rem; }
 
 /* ---------- Footer ---------- */
 footer {
-  margin-top: 64px;
-  padding-top: 20px;
+  margin-top: 56px;
+  padding-top: 18px;
   border-top: 1px solid var(--rule);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 540px) {
-  body { font-size: 17px; }
-  main { padding: 40px 20px 72px; }
-  .hero { flex-direction: column; text-align: center; align-items: center; gap: 18px; }
-  .links { justify-content: center; }
+/* ===================== Responsive ===================== */
+@media (max-width: 820px) {
+  .layout {
+    flex-direction: column;
+    gap: 36px;
+    padding: 40px 24px 72px;
+  }
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-width: 680px;
+    text-align: center;
+  }
+  .avatar { margin-left: auto; margin-right: auto; }
+  .nav, .ext-links { align-items: center; }
+  .role { max-width: 420px; margin-left: auto; margin-right: auto; }
 }

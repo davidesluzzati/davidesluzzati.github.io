@@ -26,11 +26,7 @@
     "email": "mailto:dadelutz@gmail.com",
     "jobTitle": "Postdoctoral Research Fellow",
     "worksFor": { "@type": "Organization", "name": "World Bank Group" },
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Sant'Anna School of Advanced Studies" },
-      { "@type": "CollegeOrUniversity", "name": "ETH Zürich" },
-      { "@type": "CollegeOrUniversity", "name": "University of Leeds" }
-    ],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Sant'Anna School of Advanced Studies" },
     "sameAs": [
       "https://scholar.google.com/citations?user=pRW8sOEAAAAJ",
       "https://github.com/dadelutzifc"
@@ -41,126 +37,133 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <main>
-    <!-- ===================== HEADER ===================== -->
-    <header class="hero">
+  <div class="layout">
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
       <img class="avatar" src="profile.jpg" alt="Portrait of Davide Samuele Luzzati"
            onerror="this.style.display='none'" />
-      <div class="hero-text">
-        <h1>Davide Samuele Luzzati</h1>
-        <p class="role">Postdoctoral Research Fellow · Private Markets Department (DEC–IFC), World Bank Group · Paris</p>
-        <ul class="links">
-          <li><a href="mailto:dadelutz@gmail.com">Email</a></li>
-          <li><a href="https://scholar.google.com/citations?user=pRW8sOEAAAAJ&amp;hl=it" rel="noopener">Google Scholar</a></li>
-          <li><a href="https://github.com/dadelutzifc" rel="noopener">GitHub</a></li>
-          <li><a href="cv.pdf">CV (PDF)</a></li>
-        </ul>
-      </div>
-    </header>
+      <h1>Davide Samuele Luzzati</h1>
+      <p class="role">Postdoctoral Research Fellow · Private Markets Department (DEC–IFC), World Bank Group</p>
 
-    <!-- ===================== ABOUT ===================== -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am a Postdoctoral Research Fellow in the Private Markets Department (DEC–IFC)
-        of the World Bank Group, based in Paris. My research combines empirical and
-        theoretical methods to study production networks, trade patterns, and spatial
-        development — with a particular interest in how shocks propagate through the
-        global economy.
-      </p>
-      <p>
-        I hold a PhD in Economics (<em>cum laude</em>) from the
-        <a href="https://www.santannapisa.it/en" rel="noopener">Sant'Anna School of Advanced Studies</a>
-        in Pisa, where I graduated in July 2025 under the supervision of
-        <a href="https://www.santannapisa.it/en/giorgio-fagiolo" rel="noopener">Giorgio Fagiolo</a>.
-        I also hold an MSc in Statistics from ETH Zürich and a BSc in Mathematics and
-        Economics from the University of Leeds. Before my current position, I was a PhD
-        Trainee at the European Central Bank, working on non-bank financial institutions
-        (NBFIs) and financial derivatives, and a Short-Term Consultant at the World Bank,
-        working on resilient infrastructure and supply chains.
-      </p>
-    </section>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#wip">Selected Work in Progress</a>
+        <a href="#publications">Publications</a>
+      </nav>
 
-    <!-- ===================== RESEARCH / PROJECTS ===================== -->
-    <section id="research">
-      <h2>Research</h2>
-      <div class="project">
-        <h3>Maritime Chokepoints and Energy Security</h3>
-        <p>With Chiara Criscuolo and Piyush Panigrahi.</p>
-      </div>
-      <div class="project">
-        <h3>When Tails Wag the World: Extreme Shocks in Global Production Networks</h3>
-        <p>With Chiara Criscuolo and Piyush Panigrahi.</p>
-      </div>
-      <div class="project">
-        <h3>Propagation of Shocks in Reconstructed Firm-to-Firm Networks from Input–Output Tables</h3>
-        <p>A maximum entropy approach. With Giorgio Fagiolo, Leonardo Ialongo and Diego Garlaschelli. Draft available upon request.</p>
-      </div>
-      <div class="project">
-        <h3>Temporal Production Networks</h3>
-        <p>With András Borsos and Anton Pichler.</p>
-      </div>
-    </section>
+      <ul class="ext-links">
+        <li><a href="mailto:dadelutz@gmail.com">dadelutz@gmail.com</a></li>
+        <li><a href="https://scholar.google.com/citations?user=pRW8sOEAAAAJ&amp;hl=it" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://github.com/dadelutzifc" rel="noopener">GitHub</a></li>
+        <li><a href="cv.pdf">CV (PDF)</a></li>
+      </ul>
+    </aside>
 
-    <!-- ===================== PUBLICATIONS ===================== -->
-    <section id="publications">
-      <h2>Publications</h2>
+    <!-- ===================== CONTENT ===================== -->
+    <main class="content">
 
-      <h3 class="year">Journal Articles</h3>
-      <ol class="pubs">
-        <li>
-          <span class="authors">Fagiolo, G., Luzzati, D., &amp; Zema, M. S. (2026).</span>
-          <span class="ptitle">Link or Languish? A Long-Run Empirical Analysis of Production Network Positioning, Embeddedness, and Growth.</span>
-          <span class="venue">Accepted at <em>The World Economy</em>.</span>
-        </li>
-        <li>
-          <span class="authors">Fagiolo, G., &amp; Luzzati, D. (2023).</span>
-          <span class="ptitle">Centrality in the Macroeconomic Multi-Network Explains the Spatio-Temporal Evolution of Country Per-Capita Income.</span>
-          <span class="venue"><em>Applied Network Science</em>, 8(59).</span>
-        </li>
-        <li>
-          <span class="authors">Moran, J., Fosset, A., Luzzati, D., Bouchaud, J.-P., &amp; Benzaquen, M. (2020).</span>
-          <span class="ptitle">By Force of Habit: Self-Trapping in a Dynamical Utility Landscape.</span>
-          <span class="venue"><em>Chaos: An Interdisciplinary Journal of Nonlinear Science</em>, 30(5).</span>
-        </li>
-        <li>
-          <span class="authors">Spaiser, V., Luzzati, D., &amp; Gregoriou, A. (2018).</span>
-          <span class="ptitle">Advancing Sustainability: Using Smartphones to Study Environmental Behavior in a Field-Experimental Setup.</span>
-          <span class="venue"><em>Data Science: Methods, Infrastructure, and Applications</em>, 2(1).</span>
-        </li>
-      </ol>
+      <!-- ---------- About ---------- -->
+      <section id="about">
+        <p>
+          I am a Postdoctoral Research Fellow in the Private Markets Department (DEC–IFC)
+          of the World Bank Group, based in Paris. My research combines empirical and
+          theoretical methods to study production networks, trade patterns, and spatial
+          development — with a particular interest in how shocks propagate through the
+          global economy.
+        </p>
+        <p>
+          I hold a PhD in Economics (<em>cum laude</em>) from the Sant'Anna School of
+          Advanced Studies in Pisa, where I graduated in July 2025 under the supervision of
+          <a href="https://www.santannapisa.it/en/giorgio-fagiolo" rel="noopener">Giorgio Fagiolo</a>.
+          Before my current position, I was a PhD Trainee at the European Central Bank,
+          working on non-bank financial institutions (NBFIs) and financial derivatives, and
+          a Short-Term Consultant at the World Bank, working on resilient infrastructure and
+          supply chains.
+        </p>
+      </section>
 
-      <h3 class="year">Book Chapters</h3>
-      <ol class="pubs">
-        <li>
-          <span class="authors">Coronese, M., &amp; Luzzati, D. (2022).</span>
-          <span class="ptitle">Economic Impacts of Natural Hazards and Complexity Science: A Critical Review.</span>
-          <span class="venue"><em>Handbook of Complexity Economics</em>. London &amp; New York: Routledge.</span>
-        </li>
-        <li>
-          <span class="authors">Hynes, W., Kirman, A., Latini, C., &amp; Luzzati, D. (2022).</span>
-          <span class="ptitle">A Systemic Approach to Economic Resilience.</span>
-          <span class="venue">In <em>The Routledge Handbook of Comparative Economic Systems</em>.</span>
-        </li>
-      </ol>
-    </section>
+      <!-- ---------- Selected Work in Progress ---------- -->
+      <section id="wip">
+        <h2>Selected Work in Progress</h2>
 
-    <!-- ===================== CONTACT ===================== -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:dadelutz@gmail.com">dadelutz@gmail.com</a><br />
-        Private Markets Department (DEC–IFC), World Bank Group — Paris, France
-      </p>
-    </section>
+        <div class="project">
+          <h3>Extreme Shocks in Global Production Networks</h3>
+          <ul class="subprojects">
+            <li>
+              <span class="ptitle">Maritime Chokepoints and Energy Security.</span>
+              <span class="authors">With Chiara Criscuolo and Piyush Panigrahi.</span>
+            </li>
+            <li>
+              <span class="ptitle">When Tails Wag the World: Extreme Shocks in Global Production Networks.</span>
+              <span class="authors">With Chiara Criscuolo and Piyush Panigrahi.</span>
+            </li>
+          </ul>
+        </div>
 
-    <footer>
-      <p>© <span id="year"></span> Davide Samuele Luzzati. Built with plain HTML/CSS, hosted on GitHub Pages.</p>
-    </footer>
-  </main>
+        <div class="project">
+          <h3>Cross-country Stylized Facts on Firm Networks</h3>
+          <p class="authors">With Chiara Criscuolo and Verena Wiedemann.</p>
+        </div>
+
+        <div class="project">
+          <h3>Propagation of Shocks in Reconstructed Firm-to-Firm Networks from Input–Output Tables</h3>
+          <p class="authors">With Giorgio Fagiolo, Leonardo Ialongo and Diego Garlaschelli. Draft available upon request.</p>
+        </div>
+      </section>
+
+      <!-- ---------- Publications ---------- -->
+      <section id="publications">
+        <h2>Publications</h2>
+
+        <h3 class="year">Journal Articles</h3>
+        <ol class="pubs">
+          <li>
+            <span class="authors">Fagiolo, G., Luzzati, D., &amp; Zema, M. S. (2026).</span>
+            <span class="ptitle">Link or Languish? A Long-Run Empirical Analysis of Production Network Positioning, Embeddedness, and Growth.</span>
+            <span class="venue">Accepted at <em>The World Economy</em>.</span>
+          </li>
+          <li>
+            <span class="authors">Fagiolo, G., &amp; Luzzati, D. (2023).</span>
+            <span class="ptitle">Centrality in the Macroeconomic Multi-Network Explains the Spatio-Temporal Evolution of Country Per-Capita Income.</span>
+            <span class="venue"><em>Applied Network Science</em>, 8(59).</span>
+          </li>
+          <li>
+            <span class="authors">Moran, J., Fosset, A., Luzzati, D., Bouchaud, J.-P., &amp; Benzaquen, M. (2020).</span>
+            <span class="ptitle">By Force of Habit: Self-Trapping in a Dynamical Utility Landscape.</span>
+            <span class="venue"><em>Chaos: An Interdisciplinary Journal of Nonlinear Science</em>, 30(5).</span>
+          </li>
+          <li>
+            <span class="authors">Spaiser, V., Luzzati, D., &amp; Gregoriou, A. (2018).</span>
+            <span class="ptitle">Advancing Sustainability: Using Smartphones to Study Environmental Behavior in a Field-Experimental Setup.</span>
+            <span class="venue"><em>Data Science: Methods, Infrastructure, and Applications</em>, 2(1).</span>
+          </li>
+        </ol>
+
+        <h3 class="year">Book Chapters</h3>
+        <ol class="pubs">
+          <li>
+            <span class="authors">Coronese, M., &amp; Luzzati, D. (2022).</span>
+            <span class="ptitle">Economic Impacts of Natural Hazards and Complexity Science: A Critical Review.</span>
+            <span class="venue"><em>Handbook of Complexity Economics</em>. London &amp; New York: Routledge.</span>
+          </li>
+          <li>
+            <span class="authors">Hynes, W., Kirman, A., Latini, C., &amp; Luzzati, D. (2022).</span>
+            <span class="ptitle">A Systemic Approach to Economic Resilience.</span>
+            <span class="venue">In <em>The Routledge Handbook of Comparative Economic Systems</em>.</span>
+          </li>
+        </ol>
+      </section>
+
+      <footer>
+        <p>© <span id="year"></span> Davide Samuele Luzzati</p>
+      </footer>
+
+    </main>
+  </div>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
