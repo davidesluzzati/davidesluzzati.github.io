@@ -38,7 +38,7 @@ a { color: var(--ink); }
   width: 250px;
   flex-shrink: 0;
   position: sticky;
-  top: 48px;
+  top: 72px;
 }
 
 .avatar {
@@ -67,17 +67,36 @@ a { color: var(--ink); }
   line-height: 1.45;
 }
 
-/* external links (Scholar · GitHub · CV) */
+/* ===================== Top bar ===================== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.topbar-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 13px 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* external links (Scholar · GitHub · CV) — now in the top bar */
 .ext-links {
   list-style: none;
-  margin: 0 0 20px;
-  padding: 0 0 20px;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
   font-size: 0.95rem;
   font-weight: 500;
-  border-bottom: 1px solid var(--rule);
 }
 
 .ext-links a {
@@ -199,6 +218,7 @@ footer {
     text-align: center;
   }
   .avatar { margin-left: auto; margin-right: auto; }
-  .nav, .ext-links { align-items: center; }
+  .nav { align-items: center; }
   .role { max-width: 420px; margin-left: auto; margin-right: auto; }
+  .topbar-inner { justify-content: center; padding: 12px 24px; }
 }
