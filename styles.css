@@ -67,38 +67,21 @@ a { color: var(--ink); }
   line-height: 1.45;
 }
 
-/* nav (anchor links) */
-.nav {
+/* external links (Scholar · GitHub · CV) */
+.ext-links {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
   border-bottom: 1px solid var(--rule);
 }
 
-.nav a {
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 500;
-  font-size: 0.98rem;
-}
-
-.nav a:hover { color: var(--teal); }
-
-/* external links */
-.ext-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 0.92rem;
-}
-
 .ext-links a {
-  color: var(--muted);
+  color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
@@ -107,6 +90,22 @@ a { color: var(--ink); }
   color: var(--teal);
   border-bottom-color: var(--teal);
 }
+
+/* nav (in-page anchor links) */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+
+.nav a:hover { color: var(--teal); }
 
 /* ===================== Content ===================== */
 .content {
